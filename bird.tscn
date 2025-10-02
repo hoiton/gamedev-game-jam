@@ -23,7 +23,6 @@ radius = 27.0
 height = 68.0
 
 [node name="bird" type="Area2D"]
-rotation = 1.5707964
 script = ExtResource("1_j88tq")
 metadata/_edit_group_ = true
 
@@ -35,4 +34,4 @@ animation = &"jump"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6ljjq")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

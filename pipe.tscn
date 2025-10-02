@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq7vm50udp3l0"]
+
+[ext_resource type="Script" uid="uid://bw8pb4irf24g8" path="res://pipe.gd" id="1_bepn3"]
+[ext_resource type="Texture2D" uid="uid://civqpo2v4pk37" path="res://art/mario_pipe.png" id="2_78010"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arayy"]
+size = Vector2(272, 723)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78010"]
+size = Vector2(4.625, 1068.75)
+
+[node name="PipePair" type="Node2D" groups=["pipe_pair"]]
+script = ExtResource("1_bepn3")
+metadata/_edit_group_ = true
+
+[node name="Bottom" type="Area2D" parent="." groups=["pipe"]]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(-1, 159.5)
+shape = SubResource("RectangleShape2D_arayy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bottom"]
+texture = ExtResource("2_78010")
+
+[node name="Top" type="Area2D" parent="." groups=["pipe"]]
+rotation = 3.1415927
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
+position = Vector2(-1, 159.5)
+shape = SubResource("RectangleShape2D_arayy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Top"]
+texture = ExtResource("2_78010")
+
+[node name="ScoreZone" type="Area2D" parent="." groups=["score"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreZone"]
+position = Vector2(65.3125, 305.625)
+shape = SubResource("RectangleShape2D_78010")
