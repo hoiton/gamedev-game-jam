@@ -17,7 +17,8 @@ func _on_bird_hit() -> void:
 	$PipeSpawner.enabled = false
 
 func _on_bird_score() -> void:
-	pass
+	score += 1
+	$HUD.update_score(score)
 	
 #func game_over():
 	#$ScoreTimer.stop()
