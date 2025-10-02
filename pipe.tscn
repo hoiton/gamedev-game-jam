@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cq7vm50udp3l0"]
+[gd_scene load_steps=6 format=3 uid="uid://cq7vm50udp3l0"]
 
 [ext_resource type="Script" uid="uid://bw8pb4irf24g8" path="res://pipe.gd" id="1_bepn3"]
 [ext_resource type="Texture2D" uid="uid://civqpo2v4pk37" path="res://art/mario_pipe.png" id="2_78010"]
+[ext_resource type="Texture2D" uid="uid://d2whuuaqgk117" path="res://art/mario_pipe_only.png" id="3_arayy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_arayy"]
 size = Vector2(272, 723)
@@ -23,6 +24,21 @@ shape = SubResource("RectangleShape2D_arayy")
 [node name="Sprite2D" type="Sprite2D" parent="Bottom"]
 texture = ExtResource("2_78010")
 
+[node name="PipeOnly" type="Sprite2D" parent="Bottom"]
+texture_repeat = 2
+position = Vector2(1.0913936e-11, 334)
+texture = ExtResource("3_arayy")
+
+[node name="PipeOnly2" type="Sprite2D" parent="Bottom"]
+texture_repeat = 2
+position = Vector2(2.1827873e-11, 596)
+texture = ExtResource("3_arayy")
+
+[node name="PipeOnly3" type="Sprite2D" parent="Bottom"]
+texture_repeat = 2
+position = Vector2(4.3655746e-11, 858)
+texture = ExtResource("3_arayy")
+
 [node name="Top" type="Area2D" parent="." groups=["pipe"]]
 rotation = 3.1415927
 scale = Vector2(0.5, 0.5)
@@ -33,6 +49,21 @@ shape = SubResource("RectangleShape2D_arayy")
 
 [node name="Sprite2D" type="Sprite2D" parent="Top"]
 texture = ExtResource("2_78010")
+
+[node name="PipeOnly" type="Sprite2D" parent="Top"]
+texture_repeat = 2
+position = Vector2(1.0913936e-11, 334)
+texture = ExtResource("3_arayy")
+
+[node name="PipeOnly2" type="Sprite2D" parent="Top"]
+texture_repeat = 2
+position = Vector2(2.1827873e-11, 596)
+texture = ExtResource("3_arayy")
+
+[node name="PipeOnly3" type="Sprite2D" parent="Top"]
+texture_repeat = 2
+position = Vector2(4.3655746e-11, 858)
+texture = ExtResource("3_arayy")
 
 [node name="ScoreZone" type="Area2D" parent="." groups=["score"]]
 

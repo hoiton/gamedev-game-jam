@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://crrqppkl2jchl"]
+
+[ext_resource type="Script" uid="uid://qhsmkksommva" path="res://background.gd" id="1_i7s6n"]
+[ext_resource type="Texture2D" uid="uid://whcx10px5maf" path="res://art/summer.png" id="1_oabld"]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_i7s6n")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -116.0
+offset_right = 2304.0
+offset_bottom = 1180.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_oabld")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 1728.0
+offset_top = -116.0
+offset_right = 4032.0
+offset_bottom = 1180.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_oabld")
